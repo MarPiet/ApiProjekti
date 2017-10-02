@@ -1,0 +1,34 @@
+[
+{	
+	"id": 50,
+	"name": "asd",
+	"level": 20,
+	"score": 500,
+	"powerups" : [
+	{"powerupname": "distortionray", "count" : 1}
+	]	
+},
+{	
+	"id": 51,
+	"name": "asdasd",
+	"level": 200,
+	"score": 5000,
+	"powerups" : [
+	{"powerupname": "distortionray", "count" : 2},
+	{"powerupname": "flamethrower", "count" : 5}
+	]	
+},
+{	
+	"id": 52,
+	"name": "qwe",
+	"level": 50,
+	"score": 2340,
+	"powerups" : [
+	{"powerupname": "zerogravitygenerator", "count" : 6},
+	{"powerupname": "laser", "count" : 5},
+	{"powerupname": "torpedo", "count" : 3}	
+	]	
+}
+
+]
+
