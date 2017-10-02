@@ -2,8 +2,8 @@
 {	
 	"id": 50,
 	"name": "asd",
-	"level": 20,
-	"score": 500,
+	"level": 12,
+	"score": 497,
 	"kills": 12,
 	"deaths": 16,
 	"wins": 2,
@@ -13,14 +13,17 @@
 	"powerups" : [
 	{"powerupname": "distortionray", "count" : 1},
 	{"powerupname": "health", "count" : 3},
-	{"powerupname": "flamethrower", "count" : 2}
+	{"powerupname": "flamethrower", "count" : 2},
+	{"powerupname": "shield", "count" : 7},
+	{"powerupname": "laser", "count" : 9},
+	{"powerupname": "torpedo", "count" : 2}
 	]	
 },
 {	
 	"id": 51,
-	"name": "asdasd",
-	"level": 200,
-	"score": 5000,
+	"name": "qwe",
+	"level": 22,
+	"score": 4967,
 	"kills": 40,
 	"deaths": 19,
 	"wins": 8,
@@ -32,14 +35,16 @@
 	{"powerupname": "flamethrower", "count" : 5},
 	{"powerupname": "shield", "count" : 1},
 	{"powerupname": "health", "count" : 4},
-	{"powerupname": "flamethrower", "count" : 5}
+	{"powerupname": "laser", "count" : 7},
+	{"powerupname": "mine", "count" : 3},
+	{"powerupname": "torpedo", "count" : 9}
 	]	
 },
 {	
 	"id": 52,
-	"name": "qwe",
-	"level": 50,
-	"score": 2340,
+	"name": "asdasd",
+	"level": 21,
+	"score": 2987,
 	"kills": 16,
 	"deaths": 33,
 	"wins": 4,
@@ -49,7 +54,31 @@
 	"powerups" : [
 	{"powerupname": "zerogravitygenerator", "count" : 6},
 	{"powerupname": "laser", "count" : 5},
-	{"powerupname": "torpedo", "count" : 3}	
+	{"powerupname": "torpedo", "count" : 3},
+	{"powerupname": "mine", "count" : 7},
+	{"powerupname": "shield", "count" : 12},
+	{"powerupname": "health", "count" : 4}
+	]	
+},
+{	
+	"id": 53,
+	"name": "qweqwe",
+	"level": 29,
+	"score": 7563,
+	"kills": 49,
+	"deaths": 37,
+	"wins": 23,
+	"losses": 19,
+	"matches": 32,
+	"accuracy": 62,
+	"powerups" : [
+	{"powerupname": "zerogravitygenerator", "count" : 8},
+	{"powerupname": "laser", "count" : 12},
+	{"powerupname": "torpedo", "count" : 6},
+	{"powerupname": "mine", "count" : 9},
+	{"powerupname": "shield", "count" : 16},
+	{"powerupname": "health", "count" : 7},
+	{"powerupname": "flamethrower", "count" : 12}
 	]	
 }
 
