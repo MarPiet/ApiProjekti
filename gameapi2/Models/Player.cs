@@ -12,8 +12,14 @@ namespace gameapi.Models
         public string Name { get; set; }
         public int Level { get; set; }
         public int Score { get; set; }
-        public List<Powerup> Powerups {get; set;}
-      
+        public int Kills { get; set; }
+        public int Deaths { get; set; }
+        public int Wins { get; set; }
+        public int Losses { get; set; }
+        public float KDRatio { get; set; }
+        public float WinRatio { get; set; }
+        public List<Powerup> Powerups { get; set; }
+
 
     }
 
@@ -30,9 +36,9 @@ namespace gameapi.Models
     }
     public class Powerup
     {
-        public string PowerupName {get; set;}
-        public int count {get; set;}
-        
+        public string PowerupName { get; set; }
+        public int count { get; set; }
+
 
     }
 }

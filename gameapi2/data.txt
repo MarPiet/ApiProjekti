@@ -4,8 +4,14 @@
 	"name": "asd",
 	"level": 20,
 	"score": 500,
+	"kills": 12,
+	"deaths": 16,
+	"wins": 2,
+	"losses": 3,
 	"powerups" : [
-	{"powerupname": "distortionray", "count" : 1}
+	{"powerupname": "distortionray", "count" : 1},
+	{"powerupname": "health", "count" : 3},
+	{"powerupname": "flamethrower", "count" : 2}
 	]	
 },
 {	
@@ -13,6 +19,10 @@
 	"name": "asdasd",
 	"level": 200,
 	"score": 5000,
+	"kills": 40,
+	"deaths": 19,
+	"wins": 8,
+	"losses": 2,
 	"powerups" : [
 	{"powerupname": "distortionray", "count" : 2},
 	{"powerupname": "flamethrower", "count" : 5}
@@ -23,6 +33,10 @@
 	"name": "qwe",
 	"level": 50,
 	"score": 2340,
+	"kills": 16,
+	"deaths": 33,
+	"wins": 4,
+	"losses": 12,
 	"powerups" : [
 	{"powerupname": "zerogravitygenerator", "count" : 6},
 	{"powerupname": "laser", "count" : 5},

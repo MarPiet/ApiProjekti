@@ -43,6 +43,19 @@ namespace gameapi.Processors
                         player.Score = p.Score;
                         player.Name = p.Name;
                         player.Powerups = p.Powerups;
+                        player.Kills = p.Kills;
+                        player.Deaths = p.Deaths;
+                        player.Wins = p.Wins;
+                        player.Losses = p.Losses;
+                        if (player.Deaths > 0)
+                            player.KDRatio = ((float)player.Kills / (float)player.Deaths);
+                        else
+                            player.KDRatio = player.Kills;
+
+                        if (player.Losses > 0)
+                            player.WinRatio = ((float)player.Wins / (float)player.Losses);
+                        else
+                            player.WinRatio = player.Wins;
                     }
             }
             return _repository.CreatePlayer(player);
@@ -70,12 +83,16 @@ namespace gameapi.Processors
                 if (item.PowerupName == powerup.PowerupName)
                 {
                     item.count += powerup.count;
-                    return player;
+                    await _repository.UpdatePlayer(player);
                 }
 
             }
-            player.Powerups.Add(powerup);
-            await _repository.UpdatePlayer(player);
+            if (powerup.PowerupName != null)
+            {
+                player.Powerups.Add(powerup);
+                await _repository.UpdatePlayer(player);
+            }
+
             return player;
         }
     }

@@ -57,7 +57,6 @@ namespace gameapi.Controllers
             return _processor.Delete(id);
         }
 
-
         [HttpPost]
         [ValidateModel]
         public Task<Player> Create(Player player)
