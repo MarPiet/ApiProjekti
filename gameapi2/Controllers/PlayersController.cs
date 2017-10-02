@@ -36,47 +36,48 @@ namespace gameapi.Controllers
             return _processor.GetByName(name);
         }
 
-        [HttpGet("{asd:bool}")]
-        public Task<Player[]> GetTopTen()
-        {
-            return _processor.GetTopTen();
-        }
-
         [HttpGet("toptenaccuracy")]
         public Task<Player[]> GetTopTenAccuracy()
         {
             return _processor.GetTopTenAccuracy();
         }
+
         [HttpGet("toptenmatches")]
         public Task<Player[]> GetTopTenMatches()
         {
             return _processor.GetTopTenMatches();
         }
+
         [HttpGet("toptenkdr")]
         public Task<Player[]> GetTopTenKDR()
         {
             return _processor.GetTopTenKDR();
         }
+        
         [HttpGet("toptenpickups")]
         public Task<Player[]> GetTopTenPickups()
         {
             return _processor.GetTopTenPickups();
         }
+
         [HttpPut("{name:minlength(1)}")]
         public Task<Player> UpdatePlayerNameAndScore(string name, string newName, int score)
         {
             return _processor.UpdatePlayerNameAndScore(name, newName, score);
         }
+
         [HttpPut("{id:int}")]
         public Task<Player> Update(int id, Powerup powerup)
         {
             return _processor.Update(id, powerup);
         }
+
         [HttpDelete("{id}")]
         public Task<Player> Delete(int id)
         {
             return _processor.Delete(id);
         }
+        
         [HttpPost]
         [ValidateModel]
         public Task<Player> Create(Player player)
