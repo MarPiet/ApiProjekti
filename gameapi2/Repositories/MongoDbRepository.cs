@@ -89,6 +89,62 @@ namespace gameapi.Repositories
             return player;
         }
 
+        public async Task<Player[]> GetTopTenAccuracy()
+        {
+
+            SortDefinition<Player> sortDef = Builders<Player>.Sort.Descending("Accuracy");
+            FilterDefinition<Player> filter = Builders<Player>.Filter.Gte("Matches", 10);
+            IFindFluent<Player, Player> cursor = _collection.Find(filter).Sort(sortDef).Limit(10);
+            List<Player> players = await cursor.ToListAsync();
+            Player[] player = new Player[players.Count];
+            for (int i = 0; i < players.Count; i++)
+            {
+                player[i] = players[i];
+            }
+            return player;
+        }
+
+        public async Task<Player[]> GetTopTenMatchRatio()
+        {
+            SortDefinition<Player> sortDef = Builders<Player>.Sort.Descending("WinRatio");
+            FilterDefinition<Player> filter = Builders<Player>.Filter.Gte("Matches", 10);
+            IFindFluent<Player, Player> cursor = _collection.Find(filter).Sort(sortDef).Limit(10);
+            List<Player> players = await cursor.ToListAsync();
+            Player[] player = new Player[players.Count];
+            for (int i = 0; i < players.Count; i++)
+            {
+                player[i] = players[i];
+            }
+            return player;
+        }
+
+        public async Task<Player[]> GetTopTenDeathRatio()
+        {
+            SortDefinition<Player> sortDef = Builders<Player>.Sort.Descending("KDRatio");
+            FilterDefinition<Player> filter = Builders<Player>.Filter.Gte("Kills", 25);
+            IFindFluent<Player, Player> cursor = _collection.Find(filter).Sort(sortDef).Limit(10);
+            List<Player> players = await cursor.ToListAsync();
+            Player[] player = new Player[players.Count];
+            for (int i = 0; i < players.Count; i++)
+            {
+                player[i] = players[i];
+            }
+            return player;
+        }
+        public async Task<Player[]> GetTopTenPickups()
+        {
+            SortDefinition<Player> sortDef = Builders<Player>.Sort.Descending("Pickups");
+            FilterDefinition<Player> filter = Builders<Player>.Filter.Empty;
+            IFindFluent<Player, Player> cursor = _collection.Find(filter).Sort(sortDef).Limit(10);
+            List<Player> players = await cursor.ToListAsync();
+            Player[] player = new Player[players.Count];
+            for (int i = 0; i < players.Count; i++)
+            {
+                player[i] = players[i];
+            }
+            return player;
+        }
+
         public async Task<Player> UpdatePlayer(Player player)
         {
             var filter = Builders<Player>.Filter.Eq(p => p.Id, player.Id);

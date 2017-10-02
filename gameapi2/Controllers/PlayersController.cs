@@ -29,6 +29,7 @@ namespace gameapi.Controllers
         {
             return _processor.Get(id);
         }
+
         [HttpGet("{name}")]
         public Task<Player> Get(string name)
         {
@@ -41,6 +42,26 @@ namespace gameapi.Controllers
             return _processor.GetTopTen();
         }
 
+        [HttpGet("toptenaccuracy")]
+        public Task<Player[]> GetTopTenAccuracy()
+        {
+            return _processor.GetTopTenAccuracy();
+        }
+        [HttpGet("toptenmatches")]
+        public Task<Player[]> GetTopTenMatches()
+        {
+            return _processor.GetTopTenMatches();
+        }
+        [HttpGet("toptenkdr")]
+        public Task<Player[]> GetTopTenKDR()
+        {
+            return _processor.GetTopTenKDR();
+        }
+        [HttpGet("toptenpickups")]
+        public Task<Player[]> GetTopTenPickups()
+        {
+            return _processor.GetTopTenPickups();
+        }
         [HttpPut("{name:minlength(1)}")]
         public Task<Player> UpdatePlayerNameAndScore(string name, string newName, int score)
         {
@@ -56,7 +77,6 @@ namespace gameapi.Controllers
         {
             return _processor.Delete(id);
         }
-
         [HttpPost]
         [ValidateModel]
         public Task<Player> Create(Player player)

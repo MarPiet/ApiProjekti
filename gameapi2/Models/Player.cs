@@ -16,6 +16,9 @@ namespace gameapi.Models
         public int Deaths { get; set; }
         public int Wins { get; set; }
         public int Losses { get; set; }
+        public int Accuracy { get; set; }
+        public int Matches { get; set; }
+        public int Pickups { get; set; }
         public float KDRatio { get; set; }
         public float WinRatio { get; set; }
         public List<Powerup> Powerups { get; set; }

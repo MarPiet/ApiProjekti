@@ -47,6 +47,8 @@ namespace gameapi.Processors
                         player.Deaths = p.Deaths;
                         player.Wins = p.Wins;
                         player.Losses = p.Losses;
+                        player.Matches = p.Matches;
+                        player.Accuracy = p.Accuracy;
                         if (player.Deaths > 0)
                             player.KDRatio = ((float)player.Kills / (float)player.Deaths);
                         else
@@ -56,6 +58,11 @@ namespace gameapi.Processors
                             player.WinRatio = ((float)player.Wins / (float)player.Losses);
                         else
                             player.WinRatio = player.Wins;
+                        foreach (var item in player.Powerups)
+                        {
+                            player.Pickups += item.count;
+
+                        }
                     }
             }
             return _repository.CreatePlayer(player);
@@ -94,6 +101,22 @@ namespace gameapi.Processors
             }
 
             return player;
+        }
+        public async Task<Player[]> GetTopTenAccuracy()
+        {
+            return await _repository.GetTopTenAccuracy();
+        }
+        public async Task<Player[]> GetTopTenMatches()
+        {
+            return await _repository.GetTopTenMatchRatio();
+        }
+        public async Task<Player[]> GetTopTenKDR()
+        {
+            return await _repository.GetTopTenDeathRatio();
+        }
+        public async Task<Player[]> GetTopTenPickups()
+        {
+            return await _repository.GetTopTenPickups();
         }
     }
 }

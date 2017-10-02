@@ -8,6 +8,8 @@
 	"deaths": 16,
 	"wins": 2,
 	"losses": 3,
+	"matches": 5,
+	"accuracy": 50,
 	"powerups" : [
 	{"powerupname": "distortionray", "count" : 1},
 	{"powerupname": "health", "count" : 3},
@@ -23,8 +25,13 @@
 	"deaths": 19,
 	"wins": 8,
 	"losses": 2,
+	"matches": 10,
+	"accuracy": 70,
 	"powerups" : [
 	{"powerupname": "distortionray", "count" : 2},
+	{"powerupname": "flamethrower", "count" : 5},
+	{"powerupname": "shield", "count" : 1},
+	{"powerupname": "health", "count" : 4},
 	{"powerupname": "flamethrower", "count" : 5}
 	]	
 },
@@ -37,6 +44,8 @@
 	"deaths": 33,
 	"wins": 4,
 	"losses": 12,
+	"matches": 16,
+	"accuracy": 30,
 	"powerups" : [
 	{"powerupname": "zerogravitygenerator", "count" : 6},
 	{"powerupname": "laser", "count" : 5},
