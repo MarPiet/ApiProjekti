@@ -53,11 +53,16 @@ namespace gameapi.Controllers
         {
             return _processor.GetTopTenKDR();
         }
-        
+
         [HttpGet("toptenpickups")]
         public Task<Player[]> GetTopTenPickups()
         {
             return _processor.GetTopTenPickups();
+        }
+        [HttpGet("toptenkillmatch")]
+        public Task<Player[]> GetTopTenKillsPerMatch()
+        {
+            return _processor.GetTopTenKillMatch();
         }
 
         [HttpPut("{name:minlength(1)}")]
@@ -77,7 +82,7 @@ namespace gameapi.Controllers
         {
             return _processor.Delete(id);
         }
-        
+
         [HttpPost]
         [ValidateModel]
         public Task<Player> Create(Player player)

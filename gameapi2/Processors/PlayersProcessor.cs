@@ -58,10 +58,13 @@ namespace gameapi.Processors
                             player.WinRatio = ((float)player.Wins / (float)player.Losses);
                         else
                             player.WinRatio = player.Wins;
+                        if (player.Matches > 0)
+                            player.KillsPerMatchRatio = ((float)player.Kills / (float)player.Matches);
+                        else
+                            player.KillsPerMatchRatio = player.Kills;
                         foreach (var item in player.Powerups)
                         {
                             player.Pickups += item.count;
-
                         }
                     }
             }
@@ -117,6 +120,10 @@ namespace gameapi.Processors
         public async Task<Player[]> GetTopTenPickups()
         {
             return await _repository.GetTopTenPickups();
+        }
+        public async Task<Player[]> GetTopTenKillMatch()
+        {
+            return await _repository.GetTopTenKillMatch();
         }
     }
 }

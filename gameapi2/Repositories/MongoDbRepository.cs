@@ -179,5 +179,19 @@ namespace gameapi.Repositories
             return null;
 
         }
+
+        public async Task<Player[]> GetTopTenKillMatch()
+        {
+            SortDefinition<Player> sortDef = Builders<Player>.Sort.Descending("KillsPerMatchRatio");
+            FilterDefinition<Player> filter = Builders<Player>.Filter.Gte("Matches", 10);
+            IFindFluent<Player, Player> cursor = _collection.Find(filter).Sort(sortDef).Limit(10);
+            List<Player> players = await cursor.ToListAsync();
+            Player[] player = new Player[players.Count];
+            for (int i = 0; i < players.Count; i++)
+            {
+                player[i] = players[i];
+            }
+            return player;
+        }
     }
 }

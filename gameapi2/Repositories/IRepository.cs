@@ -16,6 +16,7 @@ namespace gameapi.Repositories
         Task<Player[]> GetTopTenMatchRatio();
         Task<Player[]> GetTopTenDeathRatio();
         Task<Player[]> GetTopTenPickups();
+         Task<Player[]> GetTopTenKillMatch();
         Task<Player> UpdatePlayerNameAndScore(string name, string newName, int score);
         Task<Player> DeletePlayer(int playerId);
         Task<Player> UpdatePlayer(Player player);

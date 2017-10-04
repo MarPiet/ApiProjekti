@@ -21,6 +21,7 @@ namespace gameapi.Models
         public int Pickups { get; set; }
         public float KDRatio { get; set; }
         public float WinRatio { get; set; }
+        public float KillsPerMatchRatio { get; set; }
         public List<Powerup> Powerups { get; set; }
 
 
